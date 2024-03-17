@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/konva@9.2.0/konva.js"></script>
+    <title>Mindmap</title>
+</head>
+<body>
+    <nav id="onglet">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="BTSSIO.html">BTS SIO</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="contact.html">Contact</a>
+        <a href="mindmap.html" class="active">Mindmap</a>
+    </nav>
+    <nav id="submenu">    
+        <div>
+            <div>
+              <label>Nom de la mind map  : </label>
+              <input type="text" id="className"/>
+          </div>
+          <div>
+            <span id="currentMode"></span>
+          </div>
+        </div>
+    </nav>
+    <div id="main" style="padding: 5px; display:flex; height:85vh">
+        <div id="container" style="border: 1px solid rgb(255, 255, 255);width:70%;overflow:hidden"></div>
+        <div id="menu" style="width:30%">
+            <form style="display:flex; flex-direction: column; padding: 1em;" name="skill">
+                <label>Nom : </label><input style = "width: 33em;" type="text" oninput="majField(this)" name="name"/>
+                <label>Description : </label><input style = "width: 33em;" type="text" oninput="majDescription()" name = "description" />
+            </form>
+        </div>
+    </div>
+    <div class="tooltipND" id="tooltip">
+    </div>
+    <script src="./config.js"></script>
+    <script src="./mindmap.js"></script>
+    <script src="./customScript.js"></script>
+</body>
+</html>
